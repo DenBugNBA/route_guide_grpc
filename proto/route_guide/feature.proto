@@ -1,0 +1,16 @@
+syntax = "proto3";
+package route_guide;
+option go_package = "route_guide_grpc/route_guide";
+
+import "route_guide/point.proto";
+
+// A feature names something at a given point.
+//
+// If a feature could not be named, the name is empty.
+message Feature {
+  // The name of the feature.
+  string name = 1;
+
+  // The point where the feature is detected.
+  Point location = 2;
+}

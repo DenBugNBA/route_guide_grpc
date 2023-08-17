@@ -1,0 +1,15 @@
+syntax = "proto3";
+package route_guide;
+option go_package = "route_guide_grpc/route_guide";
+
+import "proto/route_guide/point.proto";
+
+// A latitude-longitude rectangle, represented as two diagonally opposite
+// points "lo" and "hi".
+message Rectangle {
+  // One corner of the rectangle.
+  Point lo = 1;
+
+  // The other corner of the rectangle.
+  Point hi = 2;
+}

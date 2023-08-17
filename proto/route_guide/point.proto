@@ -1,0 +1,14 @@
+syntax = "proto3";
+package route_guide;
+option go_package = "route_guide_grpc/route_guide";
+
+// Points are represented as latitude-longitude pairs in the E7 representation
+// (degrees multiplied by 10**7 and rounded to the nearest integer).
+// Latitudes should be in the range +/- 90 degrees and longitude should be in
+// the range +/- 180 degrees (inclusive).
+message Point {
+  // широта
+  int32 latitude = 1;
+  // долгота
+  int32 longitude = 2;
+}

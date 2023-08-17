@@ -1,0 +1,14 @@
+syntax = "proto3";
+package route_guide;
+option go_package = "route_guide_grpc/route_guide";
+
+import "proto/route_guide/point.proto";
+
+// A RouteNote is a message sent while at a given point.
+message RouteNote {
+  // The location from which the message is sent.
+  Point location = 1;
+
+  // The message to be sent.
+  string message = 2;
+}
